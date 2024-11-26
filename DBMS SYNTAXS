@@ -1,0 +1,98 @@
+DBMS:
+DDL COMMANDS
+1) CREATE:
+Syntax:
+CREATE TABLE TABLE_NAME (COLUMN_NAME DATATYPES[,....]);
+Example:
+CREATE TABLE EMPLOYEE(Name VARCHAR2(20), Email VARCHAR2(100), DOB DATE);
+
+2) DROP:
+Syntax:DROP TABLE ;
+Example:
+DROP TABLE EMPLOYEE
+
+3) ALTER:
+Syntax:
+ALTER TABLE table_name ADD column_name COLUMN-definition;
+ALTER TABLE MODIFY(COLUMN DEFINITION....);
+Example:
+ALTER TABLE STU_DETAILS ADD(ADDRESS VARCHAR2(20));
+ALTER TABLE STU_DETAILS MODIFY (NAME VARCHAR2(20));
+
+4) Truncate:
+Syntax:
+TRUNCATE TABLE table_name;
+Example:
+TRUNCATE TABLE EMPLOYEE;
+
+DML COMANDS
+1) Insert:
+Syntax:
+INSERT INTO TABLE_NAME (col1, col2, col3,.... col N)
+VALUES (value1, value2, value3, .... valueN);
+OR
+INSERT INTO TABLE_NAME VALUES (value1, value2, value3, .... valueN);
+Example:
+INSERT INTO XYZ (Author, Subject) VALUES ("Sonoo", "DBMS");
+
+2) Update:
+Syntax:
+UPDATE table_name SET [column_name1= value1,...column_n
+ameN = valueN] [WHERE CONDITION]
+Example:
+UPDATE students
+SET User_Name = 'Sonoo'
+WHERE Student_Id = '3'
+DCL COMMANDS
+GRANT: It is used to give user access privileges to a database.
+Example:
+GRANT SELECT, UPDATE ON MY_TABLE TO SOME_USER, ANOT
+HER_USER;
+
+REVOKE: It is used to take back permissions from the user.
+Example:
+REVOKE SELECT, UPDATE ON MY_TABLE FROM USER1, USER2;
+TCL COMMANDS
+Commit: Commit command is used to save all the transactions to
+the database.
+Syntex:
+COMMIT;
+Example:
+DELETE FROM CUSTOMERS
+WHERE AGE = 25;
+COMMIT;
+
+Rollback: Rollback command is
+used to undo transactions that
+have not already been saved
+to the database.
+Syntex:
+ROLLBACK;
+Example:
+DELETE FROM CUSTOMERS
+WHERE AGE = 25;
+ROLLBACK;
+
+SAVEPOINT: It is used to roll the
+transaction back to a certain
+point without rolling back the
+entire transaction.
+Syntex:
+SAVEPOINT SAVEPOINT_NA
+ME;
+Example:
+SQL> CREATE TABLE EMPLOYEE (
+EMP_ID INT NOT NULL,
+EMP_NAME VARCHAR (25) NOT NULL,
+PHONE_NO INT NOT NULL,
+ADDRESS CHAR (30),
+PRIMARY KEY (ID)
+);
+• DESC EMPLOYEE;
+• DELETE FROM table_name WHERE condition
+• DROP TABLE "table_name";
+• SELECT * FROM table_name;
+• INSERT INTO TABLE_NAME VALUES (value1, value2, value 3, .... Value N);
+• INSERT INTO TABLE_NAME[(col1, col2, col3,.... col N)] VALUES (value1, value2, valu
+e 3, .... Value N);
+• UPDATE table_name SET column_name = value WHERE condition;
