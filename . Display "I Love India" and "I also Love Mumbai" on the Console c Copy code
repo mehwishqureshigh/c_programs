@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+int main() {
+    printf("I Love India\n");
+    printf("I also Love Mumbai\n");
+    return 0;
+}
