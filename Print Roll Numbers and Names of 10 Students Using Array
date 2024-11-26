@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int roll[10];
+    char names[10][50];
+
+    for (int i = 0; i < 10; i++) {
+        printf("Enter roll number and name for student %d: ", i + 1);
+        scanf("%d %[^\n]", &roll[i], names[i]);
+    }
+
+    printf("\nStudent Details:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("Roll No: %d, Name: %s\n", roll[i], names[i]);
+    }
+    return 0;
+}
