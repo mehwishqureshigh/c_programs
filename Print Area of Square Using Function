@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+float area_of_square(float side) {
+    return side * side;
+}
+
+int main() {
+    float side;
+    printf("Enter the side of the square: ");
+    scanf("%f", &side);
+    printf("Area of Square = %.2f\n", area_of_square(side));
+    return 0;
+}
