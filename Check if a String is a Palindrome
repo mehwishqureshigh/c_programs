@@ -3,16 +3,27 @@
 
 int main() {
     char str[100], reversed[100];
+    int len, i, isPalindrome = 1;
+
     printf("Enter a string: ");
     scanf("%s", str);
 
-    strcpy(reversed, str);
-    strrev(reversed); // Reverse the string
+    len = strlen(str);
 
-    if (strcmp(str, reversed) == 0) {
-        printf("The string is a palindrome.\n");
-    } else {
-        printf("The string is not a palindrome.\n");
+    // Check each character from start and end
+    for (i = 0; i < len / 2; i++) {
+        if (str[i] != str[len - i - 1]) {
+            isPalindrome = 0; // Not a palindrome
+            break;
+        }
     }
+
+    if (isPalindrome) {
+        printf("The string \"%s\" is a palindrome.\n", str);
+    } else {
+        printf("The string \"%s\" is not a palindrome.\n", str);
+    }
+
     return 0;
 }
+
