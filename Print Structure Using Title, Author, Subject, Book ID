@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
+
 struct Book {
-    char title[50];
+    char title[100];
     char author[50];
     char subject[100];
     int book_id;
@@ -11,14 +12,21 @@ struct Book {
 int main() {
     struct Book book1;
 
+   
     printf("Enter Book Title: ");
-    scanf("%s", book1.title);
+    getchar();
+    fgets(book1.title, sizeof(book1.title), stdin);
+    book1.title[strcspn(book1.title, "\n")] = '\0'; 
 
+  
     printf("Enter Book Author: ");
-    scanf("%s", book1.author);
+    fgets(book1.author, sizeof(book1.author), stdin);
+    book1.author[strcspn(book1.author, "\n")] = '\0'; 
 
+   
     printf("Enter Book Subject: ");
-    scanf("%s", book1.subject);
+    fgets(book1.subject, sizeof(book1.subject), stdin);
+    book1.subject[strcspn(book1.subject, "\n")] = '\0'; 
 
     printf("Enter Book ID: ");
     scanf("%d", &book1.book_id);
